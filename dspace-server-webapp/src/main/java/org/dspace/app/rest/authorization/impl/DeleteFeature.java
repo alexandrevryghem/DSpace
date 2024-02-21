@@ -125,14 +125,14 @@ public class DeleteFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            CommunityRest.CATEGORY + "." + CommunityRest.NAME,
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-            ItemRest.CATEGORY + "." + ItemRest.NAME,
-            BundleRest.CATEGORY + "." + BundleRest.NAME,
-            BitstreamRest.CATEGORY + "." + BitstreamRest.NAME,
-            WorkspaceItemRest.CATEGORY + "." + WorkspaceItemRest.NAME,
-            EPersonRest.CATEGORY + "." + EPersonRest.NAME,
-            GroupRest.CATEGORY + "." + GroupRest.NAME
+            CommunityRest.CATEGORY + "." + CommunityRest.PLURAL_NAME,
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
+            BundleRest.CATEGORY + "." + BundleRest.PLURAL_NAME,
+            BitstreamRest.CATEGORY + "." + BitstreamRest.PLURAL_NAME,
+            WorkspaceItemRest.CATEGORY + "." + WorkspaceItemRest.PLURAL_NAME,
+            EPersonRest.CATEGORY + "." + EPersonRest.PLURAL_NAME,
+            GroupRest.CATEGORY + "." + GroupRest.PLURAL_NAME,
         };
     }
 }

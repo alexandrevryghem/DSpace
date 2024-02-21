@@ -64,7 +64,7 @@ public class CanDeleteVersionFeature extends DeleteFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            VersionRest.CATEGORY + "." + VersionRest.NAME
+            VersionRest.CATEGORY + "." + VersionRest.PLURAL_NAME,
         };
     }
 

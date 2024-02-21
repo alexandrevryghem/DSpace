@@ -84,7 +84,7 @@ public class CreateBitstreamFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            BundleRest.CATEGORY + "." + BundleRest.NAME
+            BundleRest.CATEGORY + "." + BundleRest.PLURAL_NAME,
         };
     }
 }

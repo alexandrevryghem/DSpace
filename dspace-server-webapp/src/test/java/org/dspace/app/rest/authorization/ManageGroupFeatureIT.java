@@ -225,7 +225,7 @@ public class ManageGroupFeatureIT extends AbstractControllerIntegrationTest {
 
         getClient(token).perform(
             get(
-                "/api/authz/authorizations/{epersonUuid}_canManageGroup_eperson.group_{groupUuid}",
+                "/api/authz/authorizations/{epersonUuid}_canManageGroup_eperson.groups_{groupUuid}",
                 user.getID(), group.getID()
             )
         )
@@ -254,7 +254,7 @@ public class ManageGroupFeatureIT extends AbstractControllerIntegrationTest {
 
         getClient(token).perform(
             get(
-                "/api/authz/authorizations/{epersonUuid}_canManageGroup_eperson.group_{groupUuid}",
+                "/api/authz/authorizations/{epersonUuid}_canManageGroup_eperson.groups_{groupUuid}",
                 user.getID(), group.getID()
             )
         )

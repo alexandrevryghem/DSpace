@@ -35,9 +35,9 @@ public class AlwaysFalseFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
        return new String[]{
-               SiteRest.CATEGORY + "." + SiteRest.NAME,
-               CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-               BitstreamRest.CATEGORY + "." + BitstreamRest.NAME
+               SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
+               CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+               BitstreamRest.CATEGORY + "." + BitstreamRest.PLURAL_NAME,
        };
     }
 }

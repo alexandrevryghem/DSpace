@@ -1022,7 +1022,7 @@ public class Utils {
     }
 
     /**
-     * Gets the rest object of of specified type (i.e. "core.item", "core.collection", "workflow.workflowitem",...)
+     * Gets the rest object of of specified type (i.e. "core.items", "core.collections", "workflow.workflowitems",...)
      * having given uuid.
      *
      * @param context the DSpace context

@@ -56,7 +56,7 @@ public class CanSeeVersionsFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            ItemRest.CATEGORY + "." + ItemRest.NAME
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
         };
     }
 }

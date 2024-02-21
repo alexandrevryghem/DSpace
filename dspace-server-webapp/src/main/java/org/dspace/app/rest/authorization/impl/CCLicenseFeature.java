@@ -54,6 +54,8 @@ public class CCLicenseFeature implements AuthorizationFeature {
 
     @Override
     public String[] getSupportedTypes() {
-        return new String[] { ItemRest.CATEGORY + "." + ItemRest.NAME };
+        return new String[] {
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
+        };
     }
 }

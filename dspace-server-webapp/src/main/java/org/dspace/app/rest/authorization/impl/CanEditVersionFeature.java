@@ -60,7 +60,7 @@ public class CanEditVersionFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            VersionRest.CATEGORY + "." + VersionRest.NAME
+            VersionRest.CATEGORY + "." + VersionRest.PLURAL_NAME,
         };
     }
 

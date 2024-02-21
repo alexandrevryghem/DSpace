@@ -55,8 +55,8 @@ public class SubmitFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[] {
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-            SiteRest.CATEGORY + "." + SiteRest.NAME
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+            SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
         };
     }
 }

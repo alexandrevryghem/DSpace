@@ -111,7 +111,7 @@ public class AuthorizationFeatureRestRepositoryIT extends AbstractControllerInte
         getClient().perform(get("/api/authz/features/withdrawItem")).andExpect(status().isOk())
                    .andExpect(jsonPath("$.id", is("withdrawItem")))
                    .andExpect(jsonPath("$.description", Matchers.any(String.class)))
-                   .andExpect(jsonPath("$.resourcetypes", Matchers.contains("core.item")))
+                   .andExpect(jsonPath("$.resourcetypes", Matchers.contains("core.items")))
                    .andExpect(jsonPath("$.type", is("feature")));
     }
 
@@ -149,11 +149,11 @@ public class AuthorizationFeatureRestRepositoryIT extends AbstractControllerInte
         getClient(adminToken).perform(get("/api/authz/features/search/resourcetype").param("type", "NOT-EXISTING"))
                              .andExpect(status().isOk()).andExpect(jsonPath("$.page.totalElements", is(0)));
         // verify that anonymous user cannot access, without information disclosure
-        getClient().perform(get("/api/authz/features/search/resourcetype").param("type", "core.item"))
+        getClient().perform(get("/api/authz/features/search/resourcetype").param("type", "core.items"))
                    .andExpect(status().isUnauthorized());
         // verify that normal user cannot access, without information disclosure
         String epersonAuthToken = getAuthToken(eperson.getEmail(), password);
-        getClient(epersonAuthToken).perform(get("/api/authz/features/search/resourcetype").param("type", "core.item"))
+        getClient(epersonAuthToken).perform(get("/api/authz/features/search/resourcetype").param("type", "core.items"))
                                    .andExpect(status().isForbidden());
 
     }

@@ -91,8 +91,8 @@ public class CanManageMappingsFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-            ItemRest.CATEGORY + "." + ItemRest.NAME
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
         };
     }
 }

@@ -93,7 +93,7 @@ public class AuthorizationFeatureServiceIT extends AbstractControllerIntegration
      */
     public void findByResourceTypeTest() throws Exception {
         // we have at least one feature that support the Site object
-        final String siteUniqueType = SiteRest.CATEGORY + "." + SiteRest.NAME;
+        final String siteUniqueType = SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME;
         List<AuthorizationFeature> siteFeatures = authzFeatureService.findByResourceType(siteUniqueType);
         assertThat(siteFeatures.size(), greaterThan(0));
         boolean alwaysTrueFound = false;

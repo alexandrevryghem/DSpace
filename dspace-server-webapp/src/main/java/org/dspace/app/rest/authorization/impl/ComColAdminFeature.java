@@ -50,7 +50,7 @@ public class ComColAdminFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            SiteRest.CATEGORY + "." + SiteRest.NAME
+            SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
         };
     }
 }

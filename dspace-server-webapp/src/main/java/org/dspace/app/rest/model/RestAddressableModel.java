@@ -54,6 +54,6 @@ public abstract class RestAddressableModel implements RestModel {
      *         submission.workspaceitem, etc.
      */
     public String getUniqueType() {
-        return getCategory() + "." + getType();
+        return getCategory() + "." + getTypePlural();
     }
 }

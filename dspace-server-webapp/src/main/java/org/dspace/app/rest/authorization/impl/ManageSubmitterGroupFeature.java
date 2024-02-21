@@ -56,7 +56,7 @@ public class ManageSubmitterGroupFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
         };
     }
 }

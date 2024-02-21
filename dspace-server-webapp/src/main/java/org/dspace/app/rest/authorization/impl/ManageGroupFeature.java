@@ -72,7 +72,7 @@ public class ManageGroupFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            GroupRest.CATEGORY + "." + GroupRest.NAME
+            GroupRest.CATEGORY + "." + GroupRest.PLURAL_NAME,
         };
     }
 

@@ -54,8 +54,8 @@ public class CanSubscribeFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            CommunityRest.CATEGORY + "." + CommunityRest.NAME,
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME
+            CommunityRest.CATEGORY + "." + CommunityRest.PLURAL_NAME,
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
         };
     }
 

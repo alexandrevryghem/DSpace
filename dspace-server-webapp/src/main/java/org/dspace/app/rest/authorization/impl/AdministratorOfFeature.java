@@ -66,10 +66,10 @@ public class AdministratorOfFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            SiteRest.CATEGORY + "." + SiteRest.NAME,
-            CommunityRest.CATEGORY + "." + CommunityRest.NAME,
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-            ItemRest.CATEGORY + "." + ItemRest.NAME
+            SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
+            CommunityRest.CATEGORY + "." + CommunityRest.PLURAL_NAME,
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
             };
     }
 }

@@ -43,18 +43,18 @@ public class AlwaysTrueFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
        return new String[]{
-               SiteRest.CATEGORY + "." + SiteRest.NAME,
-               CommunityRest.CATEGORY + "." + CommunityRest.NAME,
-               CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-               ItemRest.CATEGORY + "." + ItemRest.NAME,
-               BundleRest.CATEGORY + "." + BundleRest.NAME,
-               BitstreamRest.CATEGORY + "." + BitstreamRest.NAME,
-               WorkspaceItemRest.CATEGORY + "." + WorkspaceItemRest.NAME,
-               WorkflowItemRest.CATEGORY + "." + WorkflowItemRest.NAME,
-               EPersonRest.CATEGORY + "." + EPersonRest.NAME,
-               GroupRest.CATEGORY + "." + GroupRest.NAME,
-               PoolTaskRest.CATEGORY + "." + PoolTaskRest.NAME,
-               ClaimedTaskRest.CATEGORY + "." + ClaimedTaskRest.NAME
-               };
+           SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
+           CommunityRest.CATEGORY + "." + CommunityRest.PLURAL_NAME,
+           CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+           ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
+           BundleRest.CATEGORY + "." + BundleRest.PLURAL_NAME,
+           BitstreamRest.CATEGORY + "." + BitstreamRest.PLURAL_NAME,
+           WorkspaceItemRest.CATEGORY + "." + WorkspaceItemRest.PLURAL_NAME,
+           WorkflowItemRest.CATEGORY + "." + WorkflowItemRest.PLURAL_NAME,
+           EPersonRest.CATEGORY + "." + EPersonRest.PLURAL_NAME,
+           GroupRest.CATEGORY + "." + GroupRest.PLURAL_NAME,
+           PoolTaskRest.CATEGORY + "." + PoolTaskRest.PLURAL_NAME,
+           ClaimedTaskRest.CATEGORY + "." + ClaimedTaskRest.PLURAL_NAME,
+       };
     }
 }

@@ -111,8 +111,8 @@ public class RequestCopyFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            ItemRest.CATEGORY + "." + ItemRest.NAME,
-            BitstreamRest.CATEGORY + "." + BitstreamRest.NAME,
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
+            BitstreamRest.CATEGORY + "." + BitstreamRest.PLURAL_NAME,
         };
     }
 }

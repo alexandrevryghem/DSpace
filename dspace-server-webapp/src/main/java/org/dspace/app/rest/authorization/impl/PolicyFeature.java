@@ -93,12 +93,12 @@ public class PolicyFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[]{
-            SiteRest.CATEGORY + "." + SiteRest.NAME,
-            CommunityRest.CATEGORY + "." + CommunityRest.NAME,
-            CollectionRest.CATEGORY + "." + CollectionRest.NAME,
-            ItemRest.CATEGORY + "." + ItemRest.NAME,
-            BundleRest.CATEGORY + "." + BundleRest.NAME,
-            BitstreamRest.CATEGORY + "." + BitstreamRest.NAME
+            SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
+            CommunityRest.CATEGORY + "." + CommunityRest.PLURAL_NAME,
+            CollectionRest.CATEGORY + "." + CollectionRest.PLURAL_NAME,
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
+            BundleRest.CATEGORY + "." + BundleRest.PLURAL_NAME,
+            BitstreamRest.CATEGORY + "." + BitstreamRest.PLURAL_NAME,
         };
     }
 }

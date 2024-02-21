@@ -51,8 +51,8 @@ public class EditItemFeature implements AuthorizationFeature {
     @Override
     public String[] getSupportedTypes() {
         return new String[] {
-            ItemRest.CATEGORY + "." + ItemRest.NAME,
-            SiteRest.CATEGORY + "." + SiteRest.NAME
+            ItemRest.CATEGORY + "." + ItemRest.PLURAL_NAME,
+            SiteRest.CATEGORY + "." + SiteRest.PLURAL_NAME,
         };
     }
 }
