@@ -101,7 +101,7 @@ public class AccessConditionReplacePatchOperation extends ReplacePatchOperation<
     private AccessConditionOption getOption(AccessConditionConfiguration configuration,
             AccessConditionDTO accessConditionDTO) {
         for (AccessConditionOption option :configuration.getOptions()) {
-            if (option.getName().equals(accessConditionDTO.getName())) {
+            if (option.getDisplayName().equals(accessConditionDTO.getName())) {
                 return option;
             }
         }

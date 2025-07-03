@@ -80,7 +80,7 @@ public class BitstreamResourcePolicyUtils {
             throws SQLException, AuthorizeException, ParseException {
         boolean found = false;
         for (AccessConditionOption aco : uploadConfiguration.getOptions()) {
-            if (aco.getName().equalsIgnoreCase(name)) {
+            if (aco.getDisplayName().equalsIgnoreCase(name)) {
                 aco.createResourcePolicy(context, obj, name, description, startDate, endDate);
                 found = true;
                 break;

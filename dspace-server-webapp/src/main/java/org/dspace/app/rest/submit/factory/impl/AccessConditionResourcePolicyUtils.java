@@ -76,7 +76,7 @@ public class AccessConditionResourcePolicyUtils {
             String description, Date startDate, Date endDate) throws SQLException, AuthorizeException, ParseException {
         boolean found = false;
         for (AccessConditionOption accessConditionOption : accessConditionOptions) {
-            if (!found && accessConditionOption.getName().equalsIgnoreCase(name)) {
+            if (!found && accessConditionOption.getDisplayName().equalsIgnoreCase(name)) {
                 accessConditionOption.createResourcePolicy(context, obj, name, description, startDate, endDate);
                 found = true;
             }
@@ -103,7 +103,7 @@ public class AccessConditionResourcePolicyUtils {
             String name, Date startDate, Date endDate) throws SQLException, AuthorizeException, ParseException {
         boolean found = false;
         for (AccessConditionOption ac : accessConditionOptions) {
-            if (ac.getName().equalsIgnoreCase(name)) {
+            if (ac.getDisplayName().equalsIgnoreCase(name)) {
                 found = true;
             }
         }

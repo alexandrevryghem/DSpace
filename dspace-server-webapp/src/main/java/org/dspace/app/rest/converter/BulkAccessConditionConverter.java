@@ -54,7 +54,7 @@ public class BulkAccessConditionConverter
                 optionRest.setMaxStartDate(dateMathParser.parseMath(option.getStartDateLimit()));
             } catch (ParseException e) {
                 throw new IllegalStateException("Wrong start date limit configuration for the access condition "
-                        + "option named  " + option.getName());
+                        + "option named  " + option.getDisplayName());
             }
         }
         if (StringUtils.isNotBlank(option.getEndDateLimit())) {
@@ -62,10 +62,10 @@ public class BulkAccessConditionConverter
                 optionRest.setMaxEndDate(dateMathParser.parseMath(option.getEndDateLimit()));
             } catch (ParseException e) {
                 throw new IllegalStateException("Wrong end date limit configuration for the access condition "
-                        + "option named  " + option.getName());
+                        + "option named  " + option.getDisplayName());
             }
         }
-        optionRest.setName(option.getName());
+        optionRest.setName(option.getDisplayName());
         return optionRest;
     }
 

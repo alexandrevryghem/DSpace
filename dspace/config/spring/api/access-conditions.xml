@@ -20,27 +20,27 @@
 
     <bean id="openAccess" class="org.dspace.submit.model.AccessConditionOption">
         <property name="groupName" value="Anonymous"/>
-        <property name="name" value="openaccess"/>
+        <property name="displayName" value="openaccess"/>
         <property name="hasStartDate" value="false"/>
         <property name="hasEndDate" value="false"/>
     </bean>
     <bean id="lease" class="org.dspace.submit.model.AccessConditionOption">
         <property name="groupName" value="Anonymous"/>
-        <property name="name" value="lease"/>
+        <property name="displayName" value="lease"/>
         <property name="hasStartDate" value="false"/>
         <property name="hasEndDate" value="true"/>
         <property name="endDateLimit" value="+6MONTHS"/>
     </bean>
     <bean id="embargoed" class="org.dspace.submit.model.AccessConditionOption">
         <property name="groupName" value="Anonymous"/>
-        <property name="name" value="embargo"/>
+        <property name="displayName" value="embargo"/>
         <property name="hasStartDate" value="true"/>
         <property name="startDateLimit" value="+36MONTHS"/>
         <property name="hasEndDate" value="false"/>
     </bean>
     <bean id="administrator" class="org.dspace.submit.model.AccessConditionOption">
         <property name="groupName" value="Administrator"/>
-        <property name="name" value="administrator"/>
+        <property name="displayName" value="administrator"/>
         <property name="hasStartDate" value="false"/>
         <property name="hasEndDate" value="false"/>
     </bean>

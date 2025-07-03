@@ -49,7 +49,7 @@ public class AccessConditionOption {
     private static final Logger LOG = LogManager.getLogger();
 
     /** A unique name identifying the access condition option. **/
-    private String name;
+    private String displayName;
 
     /**
      * the name of the group that will be bound to the resource policy created if
@@ -83,12 +83,12 @@ public class AccessConditionOption {
      */
     private String endDateLimit;
 
-    public String getName() {
-        return name;
+    public String getDisplayName() {
+        return displayName;
     }
 
-    public void setName(String type) {
-        this.name = type;
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getGroupName() {
@@ -200,16 +200,18 @@ public class AccessConditionOption {
         LOG.debug("Validate policy dates:  name '{}', startDate {}, endDate {}",
                 name, startDate, endDate);
         if (getHasStartDate() && Objects.isNull(startDate)) {
-            throw new IllegalStateException("The access condition " + getName() + " requires a start date.");
+            throw new IllegalStateException("The access condition " + getDisplayName() + " requires a start date.");
         }
         if (getHasEndDate() && Objects.isNull(endDate)) {
-            throw new IllegalStateException("The access condition " + getName() + " requires an end date.");
+            throw new IllegalStateException("The access condition " + getDisplayName() + " requires an end date.");
         }
         if (!getHasStartDate() && Objects.nonNull(startDate)) {
-            throw new IllegalStateException("The access condition " + getName() + " cannot contain a start date.");
+            throw new IllegalStateException("The access condition " + getDisplayName() +
+                                                " cannot contain a start date.");
         }
         if (!getHasEndDate() && Objects.nonNull(endDate)) {
-            throw new IllegalStateException("The access condition " + getName() + " cannot contain an end date.");
+            throw new IllegalStateException("The access condition " + getDisplayName() +
+                                                " cannot contain an end date.");
         }
 
         DateMathParser dateMathParser = new DateMathParser();
@@ -230,7 +232,7 @@ public class AccessConditionOption {
         if (Objects.nonNull(startDate) && Objects.nonNull(latestStartDate) && startDate.after(latestStartDate)) {
             throw new IllegalStateException(String.format(
                 "The start date of access condition %s should be earlier than %s from now (%s).",
-                getName(), getStartDateLimit(), dateMathParser.getNow()
+                getDisplayName(), getStartDateLimit(), dateMathParser.getNow()
             ));
         }
 
@@ -238,7 +240,7 @@ public class AccessConditionOption {
         if (Objects.nonNull(endDate) && Objects.nonNull(latestEndDate)  && endDate.after(latestEndDate)) {
             throw new IllegalStateException(String.format(
                 "The end date of access condition %s should be earlier than %s from now (%s).",
-                getName(), getEndDateLimit(), dateMathParser.getNow()
+                getDisplayName(), getEndDateLimit(), dateMathParser.getNow()
             ));
         }
     }

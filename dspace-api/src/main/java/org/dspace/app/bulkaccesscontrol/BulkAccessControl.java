@@ -133,12 +133,12 @@ public class BulkAccessControl extends DSpaceRunnable<BulkAccessControlScriptCon
         itemAccessConditions = bulkAccessConditionConfiguration
             .getItemAccessConditionOptions()
             .stream()
-            .collect(Collectors.toMap(AccessConditionOption::getName, Function.identity()));
+            .collect(Collectors.toMap(AccessConditionOption::getDisplayName, Function.identity()));
 
         uploadAccessConditions = bulkAccessConditionConfiguration
             .getBitstreamAccessConditionOptions()
             .stream()
-            .collect(Collectors.toMap(AccessConditionOption::getName, Function.identity()));
+            .collect(Collectors.toMap(AccessConditionOption::getDisplayName, Function.identity()));
 
         help = commandLine.hasOption('h');
         filename = commandLine.getOptionValue('f');
